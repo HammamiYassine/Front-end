@@ -21,7 +21,7 @@ services:
       - mydb
   mydb:
     image: mysql
-    container_name: forumsdb
+    container_name: forumsdba
     ports:
       - 8088:3306
     environment:
