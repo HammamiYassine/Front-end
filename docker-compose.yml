@@ -2,11 +2,6 @@ version: "3.9"
 volumes:
   my-volume:
     external: true
-networks:
-  default:
-    external:
-      name: matching
-
 services:  
   frontend:
     build : .
@@ -14,6 +9,4 @@ services:
     ports:
       - 8084:80
     networks:
-      default:
-        aliases:
-          - frontend
+      - mt-network
