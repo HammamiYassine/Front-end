@@ -125,7 +125,7 @@
 
 <script>
 import "../assets/css/login.css";
-import axios from "axios";
+import axiosBase from '@/views/base.js';
 import navBar from "@/components/navbar.vue";
 import backfooter from "@/components/footer.vue";
 export default {
@@ -211,7 +211,7 @@ export default {
                 userPassword: this.userform.userPassword
             }
             this.disableLogin = true
-            axios.post("http://localhost:8070/api/users/login", user)
+            axios.post("users/login", user)
                 .then((response) => {
                     let res = response.data
                     this.disableLogin = false
@@ -263,7 +263,7 @@ export default {
         addUser(user) {
             this.disableRegister = true
             axios
-                .post("http://localhost:8070/api/users", user)
+                .post("users", user)
                 .then((response) => {
                     let id = response.data
                     this.disableRegister = false
