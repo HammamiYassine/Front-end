@@ -11,6 +11,6 @@ services:
     container_name: front-end 
     restart: always
     ports:
-      - 8089:80
+      - 8085:80
     networks:
       - mt-network
