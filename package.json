@@ -1,7 +1,6 @@
 {
   "name": "forums",
   "version": "0.1.0",
-  "private": false,
   "author": "Boulbeba bouaziz",
   "publishConfig": {
     "registry": "http://localhost:8082/repository/npm_hosted/"
